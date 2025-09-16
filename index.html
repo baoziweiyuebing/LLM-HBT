@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM-HBT: Dynamic Behavior Tree Construction for Adaptive Coordination in Heterogeneous Robots</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 0 20px;
+            color: #333;
+            background-color: #fafafa;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        .abstract {
+            background-color: #f9f9f9;
+            padding: 20px;
+/*             border-left: 4px solid #3498db; */
+            border-left: 4px solid #c0c0c0; /* 银灰色边框 - 您要求的修改 */
+            border-radius: 4px;
+            text-align: justify;
+            margin: 20px 0;
+        }
+        .authors {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .workshop-info {
+            text-align: center;
+            color: #95a5a6;
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ecf0f1;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>LLM-HBT: Dynamic Behavior Tree Construction for Adaptive Coordination in Heterogeneous Robots</h1>
+    
+<!--     <div class="authors">
+        <p><strong>Authors:</strong> Jingyuan Sun*, Hongyu Ji*, Zihan Qu, Chaoran Wang, Mingyu Zhang</p>
+    </div>
+
+    <div class="workshop-info">
+        <p><strong>Workshop:</strong> Submitted to IROS 2025 Workshop on The Future of Hybrid Mobility: Innovations in Wheeled-Legged Robots</p>
+    </div> -->
+
+    <hr>
+
+<!--     <h2>Video Presentation</h2>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/tmIaS6aLRLw" 
+            title="ATRos: Real-world Hybrid Locomotion Demonstration" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div> -->
+
+    <h2>Abstract</h2>
+    <div class="abstract">
+        <p>We introduce a novel framework for automatic behavior tree (BT) construction in heterogeneous multi-robot systems, designed to address the challenges of adaptability and robustness in dynamic environments. Traditional robots are limited by fixed functional attributes and cannot efficiently reconfigure their strategies in response to task failures or environmental changes. To overcome this limitation, we leverage large language models (LLMs) to generate and extend BTs dynamically, combining the reasoning and generalization power of LLMs with the modularity and recovery capability of BTs. The proposed framework consists of four interconnected modules—task initialization, task assignment, BT update, and failure node detection—which operate in a closed loop. Robots tick their BTs during execution, and upon encountering a failure node, they can either extend the tree locally or invoke a centralized virtual coordinator (Alex) to reassign subtasks and synchronize BTs across peers. This design enables long-term cooperative execution in heterogeneous teams. We validate the framework on 60 tasks across three simulated scenarios and in a real-world caf´e environment with a robotic arm and a wheeled-legged robot. Results show that our method consistently outperforms baseline approaches in task success rate, robustness, and scalability, demonstrating its effectiveness for multi-robot collaboration in complex scenarios.</p>
+    </div>
+
+    <h2>Additional Links</h2>
+    <ul>
+        <li>Paper: <a href="#" target="_blank">Coming Soon</a></li>
+        <li>Code Repository: <a href="#" target="_blank">Coming Soon</a></li>
+        <li>Project Website: <a href="#" target="_blank">Coming Soon</a></li>
+    </ul>
+
+    <hr>
+    
+<!--     <footer>
+        <p>© 2025 Jingyuan Sun & Collaborators. Page built with GitHub Pages.</p>
+        <p>Correspondence to: sunj549@gmail.com</p>
+    </footer> -->
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATRos: Learning Energy-Efficient Agile Locomotion for Wheeled-legged Robots - IROS 2025 Workshop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 0 20px;
+            color: #e0e0e0; /* 浅灰色文字 */
+            background-color: #121212; /* 深黑色背景 */
+        }
+        h1 {
+            color: #ffffff; /* 白色标题 */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        h2 {
+            color: #bb86fc; /* 淡紫色标题，科技感 */
+            border-bottom: 2px solid #333333; /* 深灰色分隔线 */
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* 更深的阴影 */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        .abstract {
+            background-color: #1e1e1e; /* 深灰色背景 */
+            padding: 20px;
+            border-left: 4px solid #c0c0c0; /* 银灰色边框 - 您要求的修改 */
+            border-radius: 4px;
+            text-align: justify;
+            margin: 20px 0;
+            color: #cccccc; /* 略浅的灰色文字 */
+        }
+        .authors {
+            text-align: center;
+            color: #a0a0a0; /* 中灰色 */
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .workshop-info {
+            text-align: center;
+            color: #888888; /* 深灰色 */
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666666; /* 深灰色 */
+            font-size: 0.9em;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #333333; /* 深灰色分隔线 */
+            margin: 40px 0;
+        }
+        a {
+            color: #bb86fc; /* 链接使用淡紫色 */
+            text-decoration: none;
+        }
+        a:hover {
+            color: #9b6ef3; /* 悬停时稍深的紫色 */
+            text-decoration: underline;
+        }
+        ul {
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ATRos: Learning Energy-Efficient Agile Locomotion for Wheeled-legged Robots</h1>
+    
+    <div class="authors">
+        <p><strong>Authors:</strong> Jingyuan Sun*, Hongyu Ji*, Zihan Qu, Chaoran Wang, Mingyu Zhang</p>
+    </div>
+
+    <div class="workshop-info">
+        <p><strong>Workshop:</strong> Submitted to IROS 2025 Workshop on The Future of Hybrid Mobility: Innovations in Wheeled-Legged Robots</p>
+    </div>
+
+    <hr>
+
+    <h2>Video Presentation</h2>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/tmIaS6aLRLw" 
+            title="ATRos: Real-world Hybrid Locomotion Demonstration" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <h2>Abstract</h2>
+    <div class="abstract">
+        <p>Hybrid locomotion of wheeled-legged robots has recently attracted increasing attention due to their advantages of combining the agility of legged locomotion and the efficiency of wheeled motion. But along with expanded performance, the whole-body control of wheeled-legged robots remains challenging for hybrid locomotion. In this paper, we present ATRos, a reinforcement learning (RL)-based hybrid locomotion framework to achieve hybrid walking-driving motions on the wheeled-legged robot. Without giving predefined gait patterns, our planner aims to intelligently coordinate simultaneous wheel and leg movements, thereby achieving improved terrain adaptability and improved energy efficiency. Based on RL techniques, our approach constructs a prediction policy network that could estimate external environmental states from proprioceptive sensory information, and the outputs are then fed into an actor-critic network to produce optimal joint commands. The feasibility of the proposed framework is validated through both simulations and real-world experiments across diverse terrains, including flat ground, stairs, and grassy surfaces. The hybrid locomotion framework shows robust performance over various unseen terrains, highlighting its generalization capability.</p>
+    </div>
+
+    <h2>Additional Links</h2>
+    <ul>
+        <li>Paper: <a href="#" target="_blank">Coming Soon</a></li>
+        <li>Code Repository: <a href="#" target="_blank">Coming Soon</a></li>
+        <li>Project Website: <a href="#" target="_blank">Coming Soon</a></li>
+    </ul>
+
+    <hr>
+    
+    <footer>
+        <p>© 2025 Jingyuan Sun & Collaborators. Page built with GitHub Pages.</p>
+        <p>Correspondence to: sunj549@gmail.com</p>
+    </footer>
+
+</body>
+</html>
+ -->
